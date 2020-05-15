@@ -1,6 +1,7 @@
 function [V1] = EM_in(N, Rc1, R, mu, Vo)
-%UNTITLED7 Summary of this function goes here
-%   Detailed explanation goes here
+% Studio tramite Differenze finite il valore di phi
+% tra la superficie interna del coil e la superficie del workpiece
+
 S1=Rc1^2;
 S=R^2;
 h=(S1-S)/(N+1);
@@ -14,10 +15,10 @@ Afd(j,j)=-2*hmu*sqrt(hr(j+1));
 Afd(j,j+1)=hmu*sqrt(hr(j+1));
 end
 
-%Neumann
+%Condizioni di Neumann
 Afd(1,2)=2*hmu*sqrt(hr(2));
 Afd(1,1)=-2*hmu*sqrt(hr(2));
-%Dirichlet
+%Condizioni di Dirichlet
 Afd(N+1,N)=hmu*sqrt(hr(N+2));
 Afd(N+1,N+1)=-2*hmu*sqrt(hr(N+2));
 

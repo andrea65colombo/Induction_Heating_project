@@ -1,4 +1,4 @@
-function [Vo] = EM_out(sigma, w, vk, N, Rc2, Rc1, mu)
+function [Vo] = EM_coil(sigma, w, vk, N, Rc2, Rc1, mu)
 % Studio tramite Differenze finite il valore di phi
 % tra la soperficie esterna ed interna del coil
 %Cambio di variabili s=r^2, V=sqrt(s)*phi

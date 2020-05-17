@@ -1,4 +1,4 @@
-function [V1] = EM_in(N, Rc1, R, mu, Vo)
+function [V1] = EM_air(N, Rc1, R, mu, Vo)
 % Studio tramite Differenze finite il valore di phi
 % tra la superficie interna del coil e la superficie del workpiece
 

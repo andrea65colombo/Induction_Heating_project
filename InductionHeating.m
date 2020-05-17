@@ -31,12 +31,13 @@ d=5e-3;                           %[m] Diametro cavo coil
 
 N=15;
 
+%Nello studio eseguito al di fuori del coil il risultato di phi è nullo.
 %Studio tramite differenze finite tra la superficie esterna e la superficie interna del Coil
-Vo=EM_out(sigma, w, vk, N, Rc2, Rc1, mu);
+Vo=EM_coil(sigma, w, vk, N, Rc2, Rc1, mu);
 %Studio tramite differenze finite tra la superficie interna del coil e la superficie del workpiece
-V1=EM_in(N, Rc1, R, mu, Vo);
+V1=EM_air(N, Rc1, R, mu, Vo);
 %Studio tramite differenze finite 0<r<R. con R raggio del workpiece
-phi=EM_Eq(sigma, w, vk, N, R, mu, V1);
+phi=EM_workpiece(sigma, w, vk, N, R, mu, V1);
 phi
 
 

@@ -1,4 +1,4 @@
-function [phi] = EM_Eq(sigma, w, vk, N, R, mu, V1)
+function [phi] = EM_workpiece(sigma, w, vk, N, R, mu, V1)
 % Studio tramite Differenze finite il valore di phi
 % tra 0 e la superficie del workpiece
 
